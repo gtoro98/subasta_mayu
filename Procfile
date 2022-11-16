@@ -1,1 +1,1 @@
-web:gunicorn mayu.wsgi
+web: gunicorn mayu.wsgi
