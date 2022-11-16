@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subasta Mayu</title>
+    
+</head>
+
+<body>
+    <div class="page"> 
+        <h1 >SUBASTA EAT, DRINK, AND GIVE</h1>
+        <div class="main">
+            <div class="left">
+                <div id = "img-container" class="container">
+                    {% load static %}
+                    <img id="foto" src="{% static "/media/logo_mayu.png" %}" alt="home" class="left"/>
+                </div>
+                <div id="info-container" class="container">
+                    <ul id="info">
+                        <li id="nombre_obra">Nombre Obra</li>
+                        <li id="nombre_artista">Nombre Artista</li>
+                        <li id="ano">Ano</li>
+                        <li id="dimensiones">Dimensiones</li>
+                        <li id="tecnica">Tecnica</li>
+                        <li id="precio_base">Precio Base: $20</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="right">
+                <svg class="termometro right" id="fundraising-thermometer-497" width="800" height="1050"></svg>
+            </div>
+            
+            
+        </div>
+        <div id="input" >
+            <input id="monto" type="number">
+            <button onclick="sumar()">Vendido</button>
+            <button onclick="reiniciar()">Reiniciar</button>
+        </div>
+        
+
+        
+    </div>
+    
+    
+</body>
+<script>
+    var cuadros = {{cuadros|safe}};
+</script>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'node_modules/xlsx/xlsx.min.js' %}"></script>
+<script for="fundraising-thermometer-497" type="text/javascript" src="https://d22knjn4n6hjqd.cloudfront.net/thermometer/embed.js"></script>
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+
+
+</html>
