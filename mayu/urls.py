@@ -20,9 +20,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('1', termometroViews.subasta1, name = 'subasta_#1'),
-    path('2', termometroViews.subasta2, name = 'subasta_#2'),
-    path('3', termometroViews.subasta3, name = 'subasta_#3'),
+    path('1/', termometroViews.subasta1, name = 'subasta_#1'),
+    path('2/', termometroViews.subasta2, name = 'subasta_#2'),
+    path('3/', termometroViews.subasta3, name = 'subasta_#3'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

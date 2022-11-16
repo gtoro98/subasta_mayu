@@ -5,7 +5,7 @@ import json
 def subasta1(request): 
 
     
-    df_cuadros = pd.read_excel('subasta_mayu1.xlsx')
+    df_cuadros = pd.read_excel("subasta_mayu1.xlsx")
     lista_cuadros = df_cuadros.values.tolist()
 
     context = {"cuadros":json.dumps(lista_cuadros)}
@@ -16,18 +16,18 @@ def subasta1(request):
 def subasta2(request): 
 
     
-    df_cuadros = pd.read_excel('subasta_mayu2.xlsx')
+    df_cuadros = pd.read_excel("subasta_mayu2.xlsx")
     lista_cuadros = df_cuadros.values.tolist()
 
     context = {"cuadros":json.dumps(lista_cuadros)}
     print(context)
 
-    return render(request, 'index.html', context)
+    return render(request, "index.html", context)
 
 def subasta3(request): 
 
     
-    df_cuadros = pd.read_excel('subasta_mayu3.xlsx')
+    df_cuadros = pd.read_excel("subasta_mayu3.xlsx")
     lista_cuadros = df_cuadros.values.tolist()
 
     context = {"cuadros":json.dumps(lista_cuadros)}
